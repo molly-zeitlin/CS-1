@@ -9,3 +9,4 @@ My Maze Code, which can only be used in VR Blocks, allows the bot to maneuver to
 My Food-O-Matic code randomly generates meals for the user, and the user gets to ask how many meals they want generated.
 My Function Mashup code provides the user with the option to select a function of their choice, and the functions serve a variety of purposes.
 My Password Keeper code stores and returns all the usernames and passwords for corresponding websites that the user enters. The user can also ask the computer to generate new, secure passwords. 
+My Ties in a Game, Workaholic, and Machine Learning codes are all from a CS competition I participated in with other students. These programs are responses to prompts that were provided to us at the competition.
