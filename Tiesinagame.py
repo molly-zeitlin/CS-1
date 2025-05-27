@@ -1,0 +1,5 @@
+N,M = map(int,input().split())
+scores = list(map(int,input().split()))
+S = sum(scores)
+T = M- ((S-20*M)/22)
+print(int(T))
