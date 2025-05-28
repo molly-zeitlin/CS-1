@@ -96,18 +96,18 @@ def export_to_csv(filename, headers, *arrays):
         *arrays: Variable number of array arguments (lists or tuples).
                All arrays must have the same length.
     '''
-    if not arrays:
-        raise ValueError("At least one array must be provided.")
+    if not arrays:                                                                                              #if there are no arrays
+        raise ValueError("At least one array must be provided.")                                                #then display a message without disrupting program
     
-    num_rows = len(arrays[0])
-    for arr in arrays:
-        if len(arr) != num_rows:
-            raise ValueError("All arrays must have the same length.")
+    num_rows = len(arrays[0])                                                                                   #set variable to the number of elements
+    for arr in arrays:                                                                                          #create for loop
+        if len(arr) != num_rows:                                                                                #if the length of "arr" is not equal to the length of list "arrays"
+            raise ValueError("All arrays must have the same length.")                                           #then display a message without disrupting program
     
-    with open(filename, 'w', newline='') as csvfile:
-        csvwriter = csv.writer(csvfile)
-        csvwriter.writerow(headers)
-        for i in range(num_rows):
+    with open(filename, 'w', newline='') as csvfile:                                                            #create the csv file, with defined name, in writing mode
+        csvwriter = csv.writer(csvfile)                                                                         #create a writer in order to add data to the file
+        csvwriter.writerow(headers)                                                                             #create the row (for the headers)
+        for i in range(num_rows):                                                                               #create for loop to write all data below using parallel arrays
             row = [arr[i] for arr in arrays]
             csvwriter.writerow(row)
 
@@ -115,7 +115,7 @@ def get_password_length():
     '''
     Get length of a password
     Returns:
-        print: 
+        length of a password
     '''
     while True:
         try:
@@ -214,7 +214,7 @@ Please enter repeat or STOP: ''').lower()
             add_entry(websites, usernames, passwords)
         elif extra_entry == "stop":
             print('''
-1. Print a list of your websites - along with the corosponding usernames and passwords
+1. Print a list of your websites - along with the corresponding usernames and passwords
 2. Access a specific website's username and password
 3. Change one of your usernames or passwords
 4. Export list of websites with usernames and passwords to a csv
